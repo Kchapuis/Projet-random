@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    private int keyHole;
-
     [SerializeField] private Key keyDropped;
-
-    public int KeyHole { get => keyHole; set => keyHole = value; }
+    [SerializeField] private bool isOpen = false;
     public Key KeyDropped { get => keyDropped; set => keyDropped = value; }
+    public bool IsOpen { get => isOpen; set => isOpen = value; }
+
+    private void Update()
+    {
+        if (IsOpen)
+        {
+            GetComponent<Animator>().SetBool("IsOpen", true);
+        }
+    }
 }

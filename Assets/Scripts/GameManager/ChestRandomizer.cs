@@ -31,9 +31,9 @@ public class ChestRandomizer : MonoBehaviour
         int thirdChest = Random.Range(0, thirdSetOfChests.Count);
 
         firstSetOfChests[firstChest].KeyDropped = keys[0];
-        secondSetOfChests[secondChest].KeyDropped = keys[1];
-        thirdSetOfChests[thirdChest].KeyDropped = keys[3];
+        //secondSetOfChests[secondChest].KeyDropped = keys[1];
+        //thirdSetOfChests[thirdChest].KeyDropped = keys[3];
 
-        outputText.text = $"First Chest: {firstSetOfChests[firstChest].name}\nSecond Chest: {secondSetOfChests[secondChest].name}\nThird Chest: {thirdSetOfChests[thirdChest].name}";
+        //outputText.text = $"First Chest: {firstSetOfChests[firstChest].name}\nSecond Chest: {secondSetOfChests[secondChest].name}\nThird Chest: {thirdSetOfChests[thirdChest].name}";
     }
 }

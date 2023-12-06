@@ -19,7 +19,7 @@ namespace Cainos.PixelArtTopDown_Basic
         private void Update()
         {
             Vector2 dir = Vector2.zero;
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.A))
             {
                 dir.x = -1;
                 animator.SetInteger("Direction", 3);
@@ -30,7 +30,7 @@ namespace Cainos.PixelArtTopDown_Basic
                 animator.SetInteger("Direction", 2);
             }
 
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetKey(KeyCode.W))
             {
                 dir.y = 1;
                 animator.SetInteger("Direction", 1);
