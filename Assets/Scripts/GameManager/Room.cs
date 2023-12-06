@@ -6,6 +6,7 @@ public class Room : MonoBehaviour
 {
     // Start is called before the first frame update
     public Vector3 center;
+
     void Start()
     {
         center = transform.position;
