@@ -15,7 +15,11 @@ public class ChestRandomizer : MonoBehaviour
     [SerializeField] private List<Key> keys = new List<Key>();
 
     private void Awake()
-    {
+    { 
+        if (seedRandom == string.Empty)
+        {
+            seedRandom = System.DateTime.Now.ToString();
+        }
         Random.InitState(seedRandom.GetHashCode());
         RandomizeChest();
     }
@@ -26,9 +30,9 @@ public class ChestRandomizer : MonoBehaviour
         int secondChest = Random.Range(0, secondSetOfChests.Count);
         int thirdChest = Random.Range(0, thirdSetOfChests.Count);
 
-        firstSetOfChests[firstChest].DroppedKeyNumber = 0;
-        secondSetOfChests[secondChest].DroppedKeyNumber = 1;
-        thirdSetOfChests[thirdChest].DroppedKeyNumber = 2;
+        firstSetOfChests[firstChest].KeyDropped = keys[0];
+        secondSetOfChests[secondChest].KeyDropped = keys[1];
+        thirdSetOfChests[thirdChest].KeyDropped = keys[3];
 
         outputText.text = $"First Chest: {firstSetOfChests[firstChest].name}\nSecond Chest: {secondSetOfChests[secondChest].name}\nThird Chest: {thirdSetOfChests[thirdChest].name}";
     }

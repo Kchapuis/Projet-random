@@ -6,8 +6,8 @@ public class Chest : MonoBehaviour
 {
     private int keyHole;
 
-    [SerializeField] private int droppedKeyNumber;
+    [SerializeField] private Key keyDropped;
 
     public int KeyHole { get => keyHole; set => keyHole = value; }
-    public int DroppedKeyNumber { get => droppedKeyNumber; set => droppedKeyNumber = value; }
+    public Key KeyDropped { get => keyDropped; set => keyDropped = value; }
 }
