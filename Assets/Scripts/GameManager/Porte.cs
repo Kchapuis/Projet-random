@@ -6,8 +6,8 @@ using UnityEngine;
 public class Porte : MonoBehaviour
 {
     public int dir;
-    public Room RoomIN;
-    public Room RoomOUT;
+    public GameObject RoomIN;
+    public GameObject RoomOUT;
     public bool ActualRoom;
     CameraManager test;
     // Update is called once per frame

@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    public Room RoomTofocus;
+    public GameObject RoomTofocus;
     private Vector3 _targetPosition;
     public float speed;
     void Start()
     {
         _targetPosition = transform.position;
     }
-    public void ChangeFocusRoom(Room newRoomTofocus)
+    public void ChangeFocusRoom(GameObject newRoomTofocus)
     {
         RoomTofocus = newRoomTofocus;
         

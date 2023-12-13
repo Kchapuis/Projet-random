@@ -7,6 +7,8 @@ public class Door : MonoBehaviour
     [SerializeField] private bool isOpen = false;
     [SerializeField] private List<Key> keyToOpen;
 
+    private Animator animator;
+
     public List<Key> KeyToOpen { get => keyToOpen; set => keyToOpen = value; }
 
     public void Open()
@@ -15,7 +17,8 @@ public class Door : MonoBehaviour
             return;
 
         isOpen = true;
-        GetComponent<Animator>().SetBool("IsOpen", true);
+        animator = GetComponent<Animator>();
+        animator.SetBool("IsOpen", true);
     }
 
     public void Destroy()

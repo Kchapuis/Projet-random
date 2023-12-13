@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   keyToOpen:
-  - {fileID: 11400000, guid: 6a553dd234ffc7d488f90106e96d94c7, type: 2}
+  - {fileID: 11400000, guid: d265a55954bd3c44c9c1d20b116602f9, type: 2}
 --- !u!212 &7412869905253750709
 SpriteRenderer:
   m_ObjectHideFlags: 0

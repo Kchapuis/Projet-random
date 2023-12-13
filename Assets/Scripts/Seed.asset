@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 310fce62be231414cbc25c7176748b3f, type: 3}
-  m_Name: KeyToDoor2.2
+  m_Script: {fileID: 11500000, guid: 8c038d53644e630479b0d1be0e693f78, type: 3}
+  m_Name: Seed
   m_EditorClassIdentifier: 
-  keyName: Key2.2
-  keySprite: {fileID: 0}
-  keyID: 2
+  seed: Caca
