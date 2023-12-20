@@ -22,6 +22,7 @@ public class Interact : MonoBehaviour
                 if (chest.KeyDropped.keyName != "empty")
                 {
                     inventory.AddKey(chest.KeyDropped);
+                    print("test");
                 }
                 Destroy(chest);
             }
@@ -41,8 +42,10 @@ public class Interact : MonoBehaviour
                     {
                         if (inventory.HasKey(key))
                         {
-                            door.Open();
+                            print("VINCENT T RELOU"); 
                             inventory.RemoveKey(key);
+                            door.Open();
+                           
                         }
                     }
                 }
