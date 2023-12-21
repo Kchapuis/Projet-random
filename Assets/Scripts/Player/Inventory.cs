@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class Inventory : MonoBehaviour
 {
@@ -24,9 +25,32 @@ public class Inventory : MonoBehaviour
         {
             GameObject A = Instantiate(UIprefab, new Vector3(46 + offsetUi, 43, 0), Quaternion.identity);
             A.transform.SetParent(Canvas.transform, false);
-            textGO = A.transform.GetChild(0).gameObject;
-            TMP_Text KeyIdUi = textGO.GetComponent<TMP_Text>();
-            KeyIdUi.text = (key.keyID + 1).ToString();
+
+            switch(key.keyID)
+            {
+                case 0:
+                    A.GetComponent<UnityEngine.UI.Image>().color = new Color32(255, 255, 255, 255);
+                    break;
+                case 1:
+                    A.GetComponent<UnityEngine.UI.Image>().color = new Color32(0, 255, 0, 255);
+                    break;
+                case 2:
+                    A.GetComponent<UnityEngine.UI.Image>().color = new Color32(255, 255, 0, 255);
+                    break;
+                case 3:
+                    A.GetComponent<UnityEngine.UI.Image>().color = new Color32(0, 0, 255, 255);
+                    break;
+                case 4:
+                    A.GetComponent<UnityEngine.UI.Image>().color = new Color32(255,0,0, 255);
+                    break;
+                case 5:
+                    A.GetComponent<UnityEngine.UI.Image>().color = new Color32(255, 0, 255, 255);
+                    break;
+                default:
+                    print("Va crever golum");
+                    break;
+
+            }
             UIDico.Add(key,A);
 
             offsetUi += 69.0f;
@@ -40,10 +64,8 @@ public class Inventory : MonoBehaviour
             {
                 GameObject Objnul = UIDico[key];
                 UIDico.Remove(key);
-                //Destroy(Objnul);
-                Objnul.SetActive(false);
+                Destroy(Objnul);
             }
-            //offsetUi += 69.0f;
         }
     }
     public bool HasKey(Key key)
