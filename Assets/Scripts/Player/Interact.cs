@@ -42,7 +42,6 @@ public class Interact : MonoBehaviour
                     {
                         if (inventory.HasKey(key))
                         {
-                            print("VINCENT T RELOU"); 
                             inventory.RemoveKey(key);
                             door.Open();
                            

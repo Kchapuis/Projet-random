@@ -52,7 +52,7 @@ public class ChestRandomizer : MonoBehaviour
                 Rooms[roomName].Add(_chestsList[i]);
             }
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             string roomName = "Room_" + i;
             int randomIndex = Random.Range(0, Rooms[roomName].Count);
@@ -68,13 +68,11 @@ public class ChestRandomizer : MonoBehaviour
                     Rooms[roomName].ElementAt(randomIndex).KeyDropped = keys[2];
                     break;
                 case 3:
-                    Rooms[roomName].ElementAt(randomIndex).KeyDropped = keys[2];
+                    int randomNumber = Random.Range(0, 2);
+                    Rooms[roomName].ElementAt(randomIndex).KeyDropped = keys[randomNumber+3];
                     break;
                 case 4:
-                    Rooms[roomName].ElementAt(randomIndex).KeyDropped = keys[3];
-                    break;
-                case 5:
-                    Rooms[roomName].ElementAt(randomIndex).KeyDropped = keys[3];
+                    Rooms[roomName].ElementAt(randomIndex).KeyDropped = keys[5];
                     break;
                 default:
                     break;
