@@ -10,6 +10,7 @@ public class Porte : MonoBehaviour
     public GameObject RoomOUT;
     public bool ActualRoom;
     CameraManager test;
+    public bool HorizontalMod = false;
     // Update is called once per frame
     void Start()
     {
@@ -18,18 +19,36 @@ public class Porte : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col is BoxCollider2D)
-        {
+        { 
             test = Camera.main.GetComponent<CameraManager>();
-            Debug.Log("test");
-            ActualRoom = !ActualRoom;
-            if(ActualRoom)
+            if(HorizontalMod)
             {
-                test.ChangeFocusRoom(RoomIN);
+                float distancetoRoomOUT = Vector3.Distance(RoomOUT.transform.position, col.transform.position);
+                float distancetoRoomIN = Vector3.Distance(RoomIN.transform.position, col.transform.position);
+
+                if(distancetoRoomOUT < distancetoRoomIN)
+                {
+                    test.ChangeFocusRoom(RoomIN);
+                }
+                else
+                {
+                    test.ChangeFocusRoom(RoomOUT);
+                }
             }
             else
             {
-                test.ChangeFocusRoom(RoomOUT);
+               
+                ActualRoom = !ActualRoom;
+                if(ActualRoom)
+                {
+                    test.ChangeFocusRoom(RoomIN);
+                }
+                else
+                {
+                    test.ChangeFocusRoom(RoomOUT);
+                }
             }
+            
         }
         
     }
