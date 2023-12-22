@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: RoomOUT
       value: 
       objectReference: {fileID: 1391897886}
+    - target: {fileID: 8555531826768313283, guid: 9613f0a0c353d2346b1105fe258e1fe9, type: 3}
+      propertyPath: HorizontalMod
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1088,6 +1092,10 @@ PrefabInstance:
       propertyPath: RoomOUT
       value: 
       objectReference: {fileID: 1652109176}
+    - target: {fileID: 8555531826768313283, guid: 9613f0a0c353d2346b1105fe258e1fe9, type: 3}
+      propertyPath: HorizontalMod
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3088,6 +3096,10 @@ PrefabInstance:
       propertyPath: RoomOUT
       value: 
       objectReference: {fileID: 372762955}
+    - target: {fileID: 8555531826768313283, guid: 9613f0a0c353d2346b1105fe258e1fe9, type: 3}
+      propertyPath: HorizontalMod
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3935,7 +3947,7 @@ PrefabInstance:
     - target: {fileID: 8555531826768313283, guid: 9613f0a0c353d2346b1105fe258e1fe9, type: 3}
       propertyPath: RoomOUT
       value: 
-      objectReference: {fileID: 1277172027}
+      objectReference: {fileID: 1652109176}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
